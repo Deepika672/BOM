@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 300px;
+        background-color: blanchedalmond;
+      }
+      button {
+        position: relative;
+        left: 600px;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <b style="font-size: 30px">Your product is successfully loading</b>
+    </center>
+    <script>
+      var c = document.createElement("button");
+      document.body.appendChild(c);
+      c.innerText = "back";
+      c.style.backgroundcolor = "blue";
+
+      c.addEventListener("click", hello);
+
+      function hello() {
+        window.history.back("./cards.html");
+      }
+    </script>
+  </body>
+</html>

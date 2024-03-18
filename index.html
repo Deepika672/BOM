@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Task</title>
+    <style>
+        body {
+            background-image: url(./images.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .form-container {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="button"] {
+            width: auto;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #resetButton {
+            background-color: red;
+        }
+        #submitButton {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Registration Form</h1>
+            <form>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName"><br>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName"><br>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob"><br>
+
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age"><br>
+
+                Gender:
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address"><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword"><br>
+
+                <input type="reset" value="Reset" id="resetButton">
+                <input type="button" value="Submit" id="submitButton">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function() {
+            window.location.assign("./login.html");
+        });
+    </script>
+</body>
+</html>
